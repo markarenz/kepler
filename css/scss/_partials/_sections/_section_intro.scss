@@ -1,0 +1,365 @@
+#intro{
+  overflow: visible;
+  padding: 46px 0 0 0;
+  position:relative;
+  z-index:2;
+  height:140vh;
+  @media screen and (max-width:$min-mobile-width){
+    height:130vh;
+  }
+}
+
+.bcg-parallax{
+  position:relative;
+  overflow:hidden;
+}
+
+#intro .bcg{
+  background-image:url(../img/Intro-01.jpg);
+  @media screen and (max-width:$min-phone-width){
+    background-image:url(../img/Intro-01-p.jpg);
+  }
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  top: 0;
+  z-index: 0;
+}
+
+#scroll-down{
+  font-family:$font-stack-primary;
+  position:fixed;
+  top:1vh;left:0;width:100%;
+  font-size:2vw;
+  white-space:nowrap;
+  text-align:center;
+  color:#fff;
+  top:46px;
+  @media screen and (max-width:$min-mobile-width){
+    font-size:4vw;
+    top:6vh;
+  }
+}
+#scroll-up{
+  font-family:$font-stack-primary;
+  position:fixed;
+  bottom:1vh;right:1vw;
+  width:4vw;height:4vw;
+  z-index:1000;
+  opacity:0;
+  cursor:pointer;
+}
+
+#scroll-up.anim-in{
+  opacity:.5;
+}
+
+@include keyframes(cycle-down) {
+  0%   { transform: translateY(0); }
+  50% { transform: translateY(2vh); }
+  100% { transform: translateY(0); }
+}
+#scroll-down div{
+  opacity:0.5;
+}
+#scroll-down-arrow{
+  width:2vw;
+  height:2vw;
+  margin:0 auto;
+  @include animation('cycle-down 1s infinite');
+  @media screen and (max-width:$min-mobile-width){
+    width:5vw;
+    height:5vw;
+  }
+}
+
+
+
+
+#title{
+  position:absolute;
+  height:60vw;
+  left: 10vw;
+  top:4vh;
+  @media screen and (max-width:$min-tablet-width){
+    top:16vh;
+  }
+  @media screen and (max-width:$min-mobile-width){
+    top:16vh;
+  }
+  @media screen and (max-width:$min-phone-width){
+    top:20vh;
+  }
+}
+
+#title div{
+  position:absolute;
+  font-family:$font-stack-headline-heavy;
+  color:#fff;
+  text-shadow:0 0 30px rgba(0,0,0,.7);
+}
+
+@include keyframes(zoom-down) {
+  0%   { transform: scale(2);opacity:0; }
+  100% { transform: scale(1);opacity:1; }
+}
+@include keyframes(zoom-up) {
+  0%   { transform: scale(.3);opacity:0; }
+  100% { transform: scale(1);opacity:1; }
+}
+@include keyframes(fade-in) {
+  0%   { opacity:0; }
+  100% { opacity:1; }
+}
+@include keyframes(from-left) {
+  0%   { opacity:0; transform:translateX(-100vw) }
+  100% { opacity:1; transform:translateX(0) }
+}
+@include keyframes(from-bottom) {
+  0%   { opacity:0; transform:translateY(30vh) }
+  100% { opacity:1; transform:translateY(0) }
+}
+
+
+
+#title-the{
+  font-size:5vw;line-height:5vw;
+  left:5vw;
+  top:2.5vw;
+  opacity:0;
+  @include animation('zoom-down 1s 1');
+  animation-delay:.2s;
+  animation-fill-mode: forwards;
+}
+#title-long{
+  font-size:24vw;line-height:24vw;
+  letter-spacing:-.5vw;
+  left:0;
+  top:0;
+  padding-bottom:10vw;
+  opacity:0;
+  @include animation('zoom-down 1s 1');
+  animation-fill-mode: forwards;
+  /*
+  background: -webkit-linear-gradient(#fff 40%, #888 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  */
+}
+#title-long.init{
+  @include animation('zoom-down 1s 1');
+  animation-delay:.5s;
+  animation-fill-mode: forwards;
+}
+#title-sad{
+  font-size:24vw;line-height:24vw;
+  letter-spacing:-.5vw;
+  left:47vw;
+  top:0;
+  opacity:0;
+  @include animation('zoom-down 1s 1');
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  /*
+  background: -webkit-linear-gradient(#fff 50%, #888 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  */
+}
+#title-comma{
+  font-size:24vw;line-height:24vw;
+  letter-spacing:-.5vw;
+  left:39.5vw;
+  top:0;
+  opacity:0;
+  @include animation('zoom-up 1s 1');
+  animation-delay: .7s;
+  animation-fill-mode: forwards;
+  /*
+  background: -webkit-linear-gradient(#fff 70%, #888 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  */
+}
+#title-road{
+  font-size:8vw;line-height:8vw;
+  left:40vw;
+  top:23vw;
+  text-transform:uppercase;
+  opacity:0;
+  @include animation('from-left 1s 1');
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  /*
+  background: -webkit-linear-gradient(#fff 50%, #888 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  */
+}
+#title-trip{
+  font-size:8vw;line-height:8vw;
+  left:58vw;
+  top:23vw;
+  text-transform:uppercase;
+  opacity:0;
+  @include animation('from-left 1s 1');
+  animation-delay: 1.25s;
+  animation-fill-mode: forwards;
+  /*
+  background: -webkit-linear-gradient(#fff 50%, #888 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  */
+  text-shadow:none;
+  box-shadow:0 0 20px rgba(0,0,0,.6);
+}
+#title #title-of{
+  font-size:4vw;line-height:4vw;
+  left:72.5vw;
+  top:23.8vw;
+  padding:1vw;
+  color:#000;
+  text-transform:uppercase;
+  text-shadow:none;
+  background: -webkit-linear-gradient(#fff 20%, #888 95%);
+  opacity:0;
+  @include animation('zoom-up 1s 1');
+  animation-delay: 1.7s;
+  animation-fill-mode: forwards;
+  box-shadow:0 0 20px rgba(0,0,0,.6);
+}
+#title-johannes{
+  font-size:13.2vw;line-height:13.2vw;
+  letter-spacing:-.5vw;
+  left:0;
+  top:29.5vw;
+  opacity:0;
+  @include animation('from-bottom 1s 1');
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  /*
+  background: -webkit-linear-gradient(#fff 50%, #888 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  */
+}
+#title-kepler{
+  font-size:13.2vw;line-height:13.2vw;
+  letter-spacing:-.5vw;
+  left:48vw;
+  top:29.5vw;
+  opacity:0;
+  @include animation('from-bottom 1s 1');
+  animation-delay:2.5s;
+  animation-fill-mode: forwards;
+  /*
+  background: -webkit-linear-gradient(#fff 50%, #888 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  */
+}
+
+
+
+#intro-planets{
+  position:absolute;
+  top:45vw;
+
+  @media screen and (max-width:$min-tablet-width){
+    top:70vh;
+  }
+  @media screen and (max-width:$min-mobile-width){
+    top:50vh;
+  }
+  @media screen and (max-width:$min-phone-width){
+    top:40vh;
+  }
+
+  opacity:0;
+  @include animation('from-bottom 1s 1');
+  animation-delay:3s;
+  animation-fill-mode: forwards;
+
+}
+
+#intro-planets .planet{
+  height:8vw;
+  width:8vw;
+  position:absolute;
+  animation-timing-function: ease-out;
+  @media screen and (max-width:$min-mobile-width){
+    height:20vw;
+    width:20vw;
+  }
+}
+
+#intro-planets .planet.mercury{
+  left:-2vw;
+  animation-delay: 0;
+  @media screen and (max-width:$min-mobile-width){
+    left:-5vw;
+    top:0;
+  }
+}
+#intro-planets .planet.venus{
+  left:13vw;
+  animation-delay: 1s;
+  @media screen and (max-width:$min-mobile-width){
+    left:30vw;
+    top:0;
+  }
+}
+#intro-planets .planet.earth{
+  left:28vw;
+  animation-delay: 0s;
+  @media screen and (max-width:$min-mobile-width){
+    left:65vw;
+    top:0;
+  }
+}
+#intro-planets .planet.mars{
+  left:43vw;
+  animation-delay: 1s;
+  @media screen and (max-width:$min-mobile-width){
+    left:-5vw;
+    top:20vh;
+  }
+}
+#intro-planets .planet.jupiter{
+  left:58vw;
+  animation-delay: 0s;
+  @media screen and (max-width:$min-mobile-width){
+    left:30vw;
+    top:20vh;
+  }
+}
+#intro-planets .planet.saturn{
+  left:73vw;
+  animation-delay: 1s;
+  @media screen and (max-width:$min-mobile-width){
+    left:65vw;
+    top:20vh;
+  }
+}
+
+@include keyframes(scale-cycle) {
+  0%   { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+#intro-planets .planet{
+  @include animation('scale-cycle 2s infinite');
+}
+
+
+
+
+
+
+#intro .word{
+  cursor:pointer;
+}

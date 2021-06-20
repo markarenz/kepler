@@ -1,0 +1,57 @@
+#section-06{
+  position:relative;margin:0;
+  background-image:url(../img/brahe-01.jpg);
+  background-size:cover;
+  background-position:center center;
+  @media screen and (max-width: $min-phone-width){
+    background-position: 47% center;
+  }
+  background-repeat: no-repeat;
+  padding:0;
+  .section-content{
+    overflow:auto;
+    padding:80vh 0 10vh 0;
+    color:$color-white;
+    .row{
+      background:rgba(0,0,0,.6);
+    }
+  }
+  .img-container{
+    overflow-x: hidden;
+  }
+  #section-6-moose{
+    width:20vw;
+    position:relative;
+    left:-20vw;
+    opacity:.8;
+    height:auto;
+    .shape{
+      fill:$color-beige;
+    }
+  }
+  #brahe-nose{
+    position:absolute;
+    width:100%;height:100%;
+    padding:0;margin:0;
+    background-image:url(../img/brahe-nose.png);
+    background-position:center center;
+    @media screen and (max-width: $min-phone-width){
+      background-position: 47% center;
+    }
+    background-size:cover;
+    background-repeat:no-repeat;
+  }
+  #brahe-glasses{
+    position:absolute;
+    width:100%;height:100%;
+    padding:0;margin:0;
+    background-image:url(../img/brahe-glasses.png);
+    background-position:center center;
+    @media screen and (max-width: $min-phone-width){
+      background-position: 47% center;
+    }
+    background-size:cover;
+    background-repeat:no-repeat;
+    opacity:0;
+  }
+}

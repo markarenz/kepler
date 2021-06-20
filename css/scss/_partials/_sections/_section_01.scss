@@ -1,0 +1,113 @@
+#section-1-title-container{
+		overflow-x:hidden;
+}
+#section-1-title{
+		overflow: hidden;
+    font-size: 100px;
+		line-height:68px;
+    position: relative;
+    top:0;
+		opacity:0;
+		transform:translateX(-30vw);
+    color: $color-red;
+		z-index:900;
+		transition: all 1s ease-out;
+}
+#section-1-title.anim-in{
+  opacity:1;
+  transform:translateX(0);
+}
+#section-1-title.anim-out{
+	transition: all 1s ease-in;
+  opacity:0;
+  transform:translateX(50vw);
+}
+
+#section-01{
+	position:relative;
+	z-index:2;
+    background-color: $color-red;
+    background-image: url(../img/mars-texture.png);
+    background-size:512px 505px;
+    background-repeat:repeat;
+    padding:6vh 0;
+}
+#section-01 .section-content{
+	padding:4vh 0;
+	font-size:20px;
+	width:90vw;
+	margin:0 auto;
+	color:$color-red-light;
+    padding:8vh 0;
+    overflow:auto;
+    border-top:8px solid $color-red-dark;
+    border-bottom:8px solid $color-red-dark;
+}
+
+#section-01 .section-content .col-md-4{
+	width:40%;
+	@media screen and (max-width:$min-mobile-width){
+		float:none;
+		width:90%;margin:2vh auto;
+	}
+}
+
+#section-01 .section-content .col-md-4.middle{
+	width:20%;
+	@media screen and (max-width:$min-mobile-width){
+		float:none;
+		width:90%;margin:2vh auto;
+	}
+}
+
+#section-01 .stripes{
+	position:absolute;
+	bottom:-16vh;
+	height:16vh;
+	width:100%;
+}
+
+#section-01-q1{
+	font-size:70px;
+	color:$color-yellow;
+	transform:rotate(26deg);
+	position:absolute;
+	left:50%;
+	top:170px;
+	text-shadow:2px 2px 10px rgba(0,0,0,.6);
+	transition-delay:1s;
+}
+#section-01-q2{
+	font-size:200px;
+	color:$color-yellow;
+	transform:rotate(2deg);
+	position:absolute;
+	left:10%;
+	top:10px;
+	text-shadow:2px 2px 10px rgba(0,0,0,.6);
+	transition-delay:1.5s;
+}
+#section-01-q3{
+	font-size:150px;
+	color:$color-yellow;
+	transform:rotate(-10deg);
+	position:absolute;
+	left:50%;
+	top:-20px;
+	text-shadow:2px 2px 10px rgba(0,0,0,.6);
+	transition-delay:2s;
+}
+#section-01-q4{
+	font-size:50px;
+	color:$color-yellow;
+	transform:rotate(14deg);
+	position:absolute;
+	left:60%;
+	top:130px;
+	text-shadow:2px 2px 10px rgba(0,0,0,.6);
+	transition-delay:2.5s;
+}
+
+#section-01 .col-md-4.middle .text-center{
+	position:relative;
+}

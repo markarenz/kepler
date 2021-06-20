@@ -1,0 +1,55 @@
+#section-08{
+  position:relative;margin:0;
+  .bg{
+    position:absolute;
+    top:0;left:0;
+    width:100%;
+    height:100%;
+    -moz-box-shadow:    inset 0 0 120px rgba(0,0,0,.2);
+    -webkit-box-shadow: inset 0 0 120px rgba(0,0,0,.2);
+    box-shadow:         inset 0 0 120px rgba(0,0,0,.2);
+    background-attachment:fixed;
+  }
+  .bg1{
+    background-image:url(../img/section-8-bg-01.jpg);
+    background-repeat:repeat;
+    background-size:343px 343px;
+  }
+  .bg2{
+    background-image:url(../img/section-8-bg-02.jpg);
+    background-repeat:repeat;
+    background-size:343px 343px;
+    opacity:0;
+  }
+  .bg2.anim-in{
+    opacity: 1;
+  }
+  .padding{
+    padding:10vh 0;
+  }
+  .bg3{
+    background-image:url(../img/section-8-bg-03.jpg);
+    background-repeat:repeat;
+    background-size:343px 343px;
+    opacity:0;
+  }
+  .bg3.anim-in{
+    opacity: 1;
+  }
+  .section-content{
+    position:relative;
+    overflow:auto;
+    width:40vw;
+    margin:0 auto;
+    color:$color-white;
+    padding:4vh 2vw;
+    border-left:2px solid $color-white;
+    border-right:2px solid $color-white;
+  }
+  @media screen and (max-width:$min-mobile-width){
+    .section-content{
+      width:90%
+    }
+  }
+
+}

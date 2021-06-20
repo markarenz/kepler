@@ -1,0 +1,93 @@
+#section-13{
+  clear:both;position:relative;z-index:0;
+  background-color:$color-blue;
+  box-shadow:0 10px 30px rgba(0,0,0,.7);
+  .section-content{
+    padding:3vh 0 10vh;
+    color:$color-blue-dark;
+    overflow:auto;
+  }
+  .section-top{
+    width:100%;
+    height:4vh;
+    position:absolute;
+    top:-4vh;
+  }
+  .img-container{
+    transition-delay: 2s;
+  }
+  p:nth-child(1){
+    transition-delay: 1s;
+  }
+  p:nth-child(2){
+    transition-delay: 1.25s;
+  }
+  p:nth-child(3){
+    transition-delay: 1.5s;
+  }
+  h3{
+    font-family:$font-stack-headline-heavy;
+    font-size:40px;
+    text-align:center;
+    line-height:50px;
+    padding:5vh 0 1vh 0;
+    color:$color-blue-dark;
+    transition-delay:.5s;
+  }
+  #section-13-top-1{
+    top:-6vh;
+  }
+  #section-13-top-2{
+    top:-5vh;
+  }
+  #section-13-top-1 .shape{
+    fill:$color-beige;
+  }
+  #section-13-top-2 .shape{
+    fill:$color-red;
+  }
+  #section-13-top-3 .shape{
+    fill:$color-blue;
+  }
+}
+
+#section-13-planets{
+  position:absolute;
+  bottom:-4vw;
+  text-align:center;
+  width:100%;
+  z-index:10;
+}
+#close-planets{
+  position:absolute;
+  top:-4vw;
+  text-align:center;
+  width:100%;
+  z-index:10;
+}
+
+#section-13-planets .planet,
+#close-planets .planet{
+  height:8vw;
+  width:8vw;
+  margin:0 2vw;
+  animation-timing-function: ease-out;
+  @include animation('scale-cycle 2s infinite');
+}
+
+#section-13-planets .planet.jupiter,
+#section-13-planets .planet.earth,
+#section-13-planets .planet.mercury,
+#close-planets .planet.jupiter,
+#close-planets .planet.earth,
+#close-planets .planet.mercury{
+  animation-delay: 0s
+}
+#section-13-planets .planet.saturn,
+#section-13-planets .planet.mars,
+#section-13-planets .planet.venus,
+#close-planets .planet.saturn,
+#close-planets .planet.mars,
+#close-planets .planet.venus{
+  animation-delay: 1s;
+}

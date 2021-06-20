@@ -1,0 +1,38 @@
+/* FONTS */
+$font-stack-headline-heavy: 'Germania One', cursive, serif;
+$font-stack-primary: Montserrat, verdana, sans-serif;
+$font-stack-handwriting: 'Homemade Apple', cursive;
+
+/* COLORS */
+$color-white: #fff;
+$color-black: #222;
+$color-red: #e26140; /* MARS */
+$color-red-light:lighten($color-red,25);
+$color-red-dark:darken($color-red,10);
+
+$color-grey: #a7a9ac; /* MERCURY */
+$color-grey-light:lighten($color-grey,25);
+$color-grey-dark:darken($color-grey,30);
+
+$color-beige: #e2c1a3; /* VENUS/JUPITER */
+$color-beige-light:lighten($color-beige,25);
+$color-beige-dark:darken($color-beige,30);
+
+$color-blue: #3eb4e7; /* EARTH */
+$color-blue-light:lighten($color-blue,25);
+$color-blue-dark:darken($color-blue,25);
+
+$color-green: #aad14b;
+$color-green-light:lighten($color-green,25);
+$color-green-dark:darken($color-green,25);
+
+$color-yellow: #f9c853; /* SATURN */
+$color-yellow-light:lighten($color-yellow,25);
+$color-yellow-dark:darken($color-yellow,10);
+
+
+
+/* RESPONSIVE */
+$min-tablet-width:1024px;
+$min-mobile-width:768px;
+$min-phone-width:486px;
